@@ -1,5 +1,4 @@
 
-<!-- end #logo -->
 <div id="page">
     <div id="page-bgtop">
         <div id="content">
