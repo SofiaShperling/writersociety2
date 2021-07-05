@@ -20,21 +20,20 @@ class Route
         $modelName = 'Model_' . $controllerName;
         $controllerName = 'Controller_' . $controllerName;
         $actionName = 'action_' . $actionName;
+        
+        spl_autoload_register(function ($modelName) {
+            if (file_exists(strtolower($modelName) . '.php')) {
+            include strtolower($modelName) . '.php';
+            }
+        });
 
-        $modelFile = strtolower($modelName) . '.php';
-        $modelPath = "../application/models/" . $modelFile;
-        if (file_exists($modelPath)) {
-            include $modelPath;
-        }
-
-        $controllerFile = strtolower($controllerName) . '.php';
-        $controllerPath = "../application/controllers/" . $controllerFile;
-        var_dump(file_exists($controllerPath));
-        if (file_exists($controllerPath)) {
-            include $controllerPath;
-        } else {
-            Route::ErrorPage404();
-        }
+        spl_autoload_register(function ($controllerName) {
+            if (file_exists(strtolower($controllerName) . '.php')) {
+                include strtolower($controllerName) . '.php';
+            } else {
+                Route::ErrorPage404();
+            }
+        });
 
         $controller = new $controllerName;
         $action = $actionName;
