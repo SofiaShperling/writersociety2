@@ -2,10 +2,10 @@
 
 class View
 {
-    //public $template_view; /
+    private $templateView;
 
-    function generate($content_view, $template_view, $data = null)
+    function generate($contentView, $templateView, $data = null)
     {
-        include 'application/views/' . $template_view;
+        include 'application/views/' . $templateView;
     }
 }

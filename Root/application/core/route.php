@@ -4,40 +4,40 @@ class Route
 {
     static function start()
     {
-        $controller_name = 'Main';
-        $action_name = 'index';
+        $controllerName = 'Main';
+        $actionName = 'index';
 
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
         if (!empty($routes[1])) {
-            $controller_name = $routes[1];
+            $controllerName = $routes[1];
         }
 
         if (!empty($routes[2])) {
-            $action_name = $routes[2];
+            $actionName = $routes[2];
         }
 
-        $model_name = 'Model_' . $controller_name;
-        $controller_name = 'Controller_' . $controller_name;
-        $action_name = 'action_' . $action_name;
+        $modelName = 'Model_' . $controllerName;
+        $controllerName = 'Controller_' . $controllerName;
+        $actionName = 'action_' . $actionName;
 
-        $model_file = strtolower($model_name) . '.php';
-        $model_path = "../application/models/" . $model_file;
-        if (file_exists($model_path)) {
-            include $model_path;
+        $modelFile = strtolower($modelName) . '.php';
+        $modelPath = "../application/models/" . $modelFile;
+        if (file_exists($modelPath)) {
+            include $modelPath;
         }
 
-        $controller_file = strtolower($controller_name) . '.php';
-        $controller_path = "../application/controllers/" . $controller_file;
-        var_dump(file_exists($controller_path));
-        if (file_exists($controller_path)) {
-            include $controller_path;
+        $controllerFile = strtolower($controllerName) . '.php';
+        $controllerPath = "../application/controllers/" . $controllerFile;
+        var_dump(file_exists($controllerPath));
+        if (file_exists($controllerPath)) {
+            include $controllerPath;
         } else {
             Route::ErrorPage404();
         }
 
-        $controller = new $controller_name;
-        $action = $action_name;
+        $controller = new $controllerName;
+        $action = $actionName;
 
         if (method_exists($controller, $action)) {
             $controller->$action();
