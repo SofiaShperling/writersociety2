@@ -4,7 +4,6 @@
     <div id="page-bgtop">
         <div id="content">
             <div class="post">
-                <!--                <p class="meta"><span class="date">Sunday, April 26, 2009</span> 7:27 AM Posted by <a href="#">Someone</a></p>-->
                 <p class="meta">Posted by <a href="#">Someone</a>
                 <h2 class="title"><a href="#">Welcome to Predilection </a></h2>
                 <div class="entry">
@@ -45,7 +44,6 @@
                 </div>
             </div>
         </div>
-        <!-- end #content -->
         <div id="sidebar">
             <ul>
                 <li>
@@ -70,8 +68,6 @@
                 </li>
             </ul>
         </div>
-        <!-- end #sidebar -->
         <div style="clear: both;">&nbsp;</div>
     </div>
-    <!-- end #page -->
 </div>
