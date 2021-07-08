@@ -1,5 +1,7 @@
 <?php
-require '../controllers/controller.php';
+namespace Root\application\controllers\Controller_Main;
+
+use Root\application\controllers\Controller;
 
 class Controller_Main extends Controller
 {
