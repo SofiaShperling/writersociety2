@@ -8,8 +8,8 @@
 </head>
 
 <body>
-<?php include 'Root/public/header.php'; ?>
-<?php include 'Root/application/views/' . $content_view; ?>
-<?php include 'Root/public/footer.php'; ?>
+<?php include 'header.php'; ?>
+<?php //include 'Root/application/views/' . $ContentView; ?>
+<?php //include 'footer.php'; ?>
 </body>
 </html>>

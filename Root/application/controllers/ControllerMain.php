@@ -1,12 +1,14 @@
 <?php
-namespace Root\application\controllers\Controller_Main;
 
-use Root\application\controllers\Controller;
+namespace application\controllers;
 
-class Controller_Main extends Controller
+use application\controllers\Controller;
+use applications\views\View;
+
+class ControllerMain extends Controller
 {
-    function action_index()
+    function ActionIndex()
     {
-        $this->view->generate('main_view.php', 'template_view.php');
+        $this->view->generate('MainView.php', 'TemplateView.php');
     }
 }

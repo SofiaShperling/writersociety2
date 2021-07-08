@@ -3,10 +3,12 @@ namespace applications\views;
 
 class View
 {
-    private $templateView;
+    private $TemplateView = 'TemplateView.php';
 
-    function generate($contentView, $templateView, $data = null)
+    function generate($ContentView, $TemplateView, $data = null)
     {
-        include 'application/views/' . $templateView;
+//        var_dump('application/views/' . $TemplateView);
+        include $TemplateView;
+        include $ContentView;
     }
 }

@@ -1,13 +1,13 @@
 <?php
 
 namespace application\controllers;
+use applications\views\View;
 
 class Controller
 {
 
     public $model;
     public $view;
-
     function __construct()
     {
         $this->view = new View();

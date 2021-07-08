@@ -1,7 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/css/style.css"/>
-<?php
-require '../models/mocks/MocksAuthors.php'
-?>
+<link rel="stylesheet" type="text/css" href="style.css"/>
 <div id="page">
     <div id="page-bgtop">
         <div id="content">
@@ -63,23 +60,13 @@ require '../models/mocks/MocksAuthors.php'
             <ul>
                 <li>
                     <h2>Top-5 authors</h2>
-                    <?php
-                    for ($count = 0; $count < 5; $count++){
-                        ?>
-                <li><a href="#">test</a></li>
-                <?php
-                }
-                ?>
-
-                }
-                ?>
-                <ul>
-                    <li><a href="#">Sofia Shperling</a></li>
-                    <li><a href="#">Antonio Pablo</a></li>
-                    <li><a href="#">Ivan Pablo</a></li>
-                    <li><a href="#">Vasiliy Pablo</a></li>
-                    <li><a href="#">Daria Antioniella</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="#">Sofia Shperling</a></li>
+                        <li><a href="#">Antonio Pablo</a></li>
+                        <li><a href="#">Ivan Pablo</a></li>
+                        <li><a href="#">Vasiliy Pablo</a></li>
+                        <li><a href="#">Daria Antioniella</a></li>
+                    </ul>
                 </li>
                 <li>
                     <h2>Top-5 posts</h2>
