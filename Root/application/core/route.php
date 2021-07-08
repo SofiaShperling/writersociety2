@@ -1,13 +1,17 @@
 <?php
 //require  '../../autoloader.php';
-
+namespace application\core;
 use application\controllers\ControllerMain;
+
 class Route
 {
     static function start()
     {
         $ControllerName = 'Main';
         $ActionName = 'Index';
+        if ((explode('/', $_SERVER['REQUEST_URI'])) == 'posts') {
+            $ControllerName = 'Posts';
+        }
 
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
