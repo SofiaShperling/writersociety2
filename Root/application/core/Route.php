@@ -1,6 +1,9 @@
 <?php
+
 namespace application\core;
-use application\controllers\ControllerMain;
+
+use application\controllers\ControllerMain as ControllerMain;
+use application\controllers\ControllerPosts as ControllerPosts;
 
 class Route
 {
@@ -8,29 +11,18 @@ class Route
     {
         $ControllerName = 'Main';
         $ActionName = 'Index';
-        if ((explode('/', $_SERVER['REQUEST_URI'])) == 'posts') {
-            $ControllerName = 'Posts';
+
+        if ($_SERVER['REQUEST_URI'] == '/') {
+            $ControllerName = ControllerMain::class;
+            $ActionName = 'ActionIndex';
+        } elseif ($_SERVER['REQUEST_URI'] == '/posts') {
+            $ControllerName = ControllerPosts::class;
+            $ActionName = 'ActionIndex';
         }
 
-        $routes = explode('/', $_SERVER['REQUEST_URI']);
-
-        if (!empty($routes[1])) {
-            $ControllerName = $routes[1];
-        }
-
-        if (!empty($routes[2])) {
-            $ActionName = $routes[2];
-        }
-
-        $ControllerName = 'Controller' . $ControllerName;
-        $ActionName = 'Action' . $ActionName;
-
-        var_dump($ControllerName);
-        $controller = new ControllerMain();
-        $action = $ActionName;
-
-        if (method_exists($controller, $action)) {
-            $controller->$action();
+        $controller = new $ControllerName();
+        if (method_exists($controller, $ActionName)) {
+            $controller->$ActionName();
         } else {
             Route::ErrorPage404();
         }
