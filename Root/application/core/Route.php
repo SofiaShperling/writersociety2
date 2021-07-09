@@ -18,6 +18,9 @@ class Route
         } elseif ($_SERVER['REQUEST_URI'] == '/posts') {
             $ControllerName = ControllerPosts::class;
             $ActionName = 'ActionIndex';
+        } elseif ($_SERVER['REQUEST_URI'] == '/authors') {
+            $ControllerName = ControllerMain::class;
+            $ActionName = 'ActionAuthors';
         }
 
         $controller = new $ControllerName();
