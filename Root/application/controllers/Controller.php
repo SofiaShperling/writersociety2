@@ -1,7 +1,7 @@
 <?php
 
 namespace application\controllers;
-use applications\views\View;
+use application\views\View;
 
 class Controller
 {
