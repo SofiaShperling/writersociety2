@@ -7,13 +7,18 @@ use applications\views\View;
 
 class ControllerMain extends Controller
 {
-    function ActionIndex()
+    function ActionMain()
     {
-        $this->view->generate('MainView.php', 'TemplateView.php');
+        $this->view->generate('MainView.php', 'header.php', 'footer.php');
     }
 
     function ActionAuthors()
     {
-        $this->view->generate('AuthorsView.php', 'TemplateView.php');
+        $this->view->generate('AuthorsView.php', 'header.php', 'footer.php');
+    }
+
+    function ActionPosts()
+    {
+        $this->view->generate('PostsView.php', 'header.php', 'footer.php');
     }
 }

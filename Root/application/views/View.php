@@ -3,11 +3,12 @@ namespace application\views;
 
 class View
 {
-    private $TemplateView = 'TemplateView.php';
+//    private $TemplateHeaderView = 'header.php';
 
-    function generate($ContentView, $TemplateView, $data = null)
+    function generate($ContentView, $TemplateHeaderView, $TemplateFooterView, $data = null)
     {
-        include $TemplateView;
+        include $TemplateHeaderView;
         include $ContentView;
+        include $TemplateFooterView;
     }
 }
