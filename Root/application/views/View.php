@@ -7,7 +7,6 @@ class View
 
     function generate($ContentView, $TemplateView, $data = null)
     {
-//        var_dump('application/views/' . $TemplateView);
         include $TemplateView;
         include $ContentView;
     }

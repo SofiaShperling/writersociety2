@@ -1,5 +1,4 @@
 <?php
-//require  '../../autoloader.php';
 namespace application\core;
 use application\controllers\ControllerMain;
 
