@@ -11,4 +11,9 @@ class ControllerMain extends Controller
     {
         $this->view->generate('MainView.php', 'TemplateView.php');
     }
+
+    function ActionAuthors()
+    {
+        $this->view->generate('AuthorsView.php', 'TemplateView.php');
+    }
 }
