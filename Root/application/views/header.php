@@ -1,3 +1,10 @@
+<?php
+    require_once __DIR__. '/../models/include/database.php';
+    require_once __DIR__. '/../models/Functions.php';
+?>
+<pre>
+<?php var_dump($categories); ?>
+</pre>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title>Writer Society</title>
 <meta name="keywords" content=""/>
