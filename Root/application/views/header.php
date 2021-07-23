@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__. '/../models/include/database.php';
-    require_once __DIR__. '/../models/Functions.php';
+    require_once __DIR__ . '/../models/GetCategories.php';
 ?>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title>Writer Society</title>
@@ -14,7 +14,7 @@
     <div id="header">
         <div id="menu">
             <ul>
-                <?php $categories = get_categoties($link); ?>
+                <?php $categories = GetCategoties($link); ?>
                 <?php foreach ($categories as $category):
                     $categorylink = $category["title"];
                     if ($category["title"] == 'main'){
