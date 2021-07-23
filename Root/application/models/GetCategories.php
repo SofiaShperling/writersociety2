@@ -1,7 +1,9 @@
 <?php
 
-function get_categoties($link){
+function GetCategoties($link){
     $sql = "SELECT * FROM `category_title`";
+
+//    global $link;
 
     $result = mysqli_query($link, $sql);
 
@@ -9,5 +11,3 @@ function get_categoties($link){
 
     return $categories;
 }
-
-$categories = get_categoties($link);
