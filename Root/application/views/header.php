@@ -2,9 +2,6 @@
     require_once __DIR__. '/../models/include/database.php';
     require_once __DIR__. '/../models/Functions.php';
 ?>
-<pre>
-<?php var_dump($categories); ?>
-</pre>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title>Writer Society</title>
 <meta name="keywords" content=""/>
@@ -17,10 +14,15 @@
     <div id="header">
         <div id="menu">
             <ul>
-                <li ><a href="/">Main page</a></li>
-                <li><a href="/posts">Posts</a></li>
-                <li><a href="/authors">Authors</a></li>
-                <li><a href="#" class="last">Personal page</a></li>
+                <?php $categories = get_categoties($link); ?>
+                <?php foreach ($categories as $category):
+                    $categorylink = $category["title"];
+                    if ($category["title"] == 'main'){
+                        $categorylink = '';
+                    }
+                ?>
+                    <li><a href="/<?=$categorylink?>"><?=$category["title"]?></a></li>
+                <?php endforeach; ?>
                 <li class="current_page_item"><a href="#"> log in / check in </a></li>
             </ul>
         </div>
