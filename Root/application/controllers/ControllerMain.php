@@ -11,14 +11,4 @@ class ControllerMain extends Controller
     {
         $this->view->generate('MainView.php', 'header.php', 'footer.php');
     }
-
-    function ActionAuthors()
-    {
-        $this->view->generate('AuthorsView.php', 'header.php', 'footer.php');
-    }
-
-    function ActionPosts()
-    {
-        $this->view->generate('PostsView.php', 'header.php', 'footer.php');
-    }
 }

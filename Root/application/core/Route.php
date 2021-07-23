@@ -3,7 +3,8 @@
 namespace application\core;
 
 use application\controllers\ControllerMain as ControllerMain;
-//use application\controllers\ControllerPosts as ControllerPosts;
+use application\controllers\ControllerPosts as ControllerPosts;
+use application\controllers\ControllerAuthors as ControllerAuthors;
 
 class Route
 {
@@ -16,11 +17,11 @@ class Route
             $ControllerName = ControllerMain::class;
             $ActionName = 'ActionMain';
         } elseif ($_SERVER['REQUEST_URI'] == '/posts') {
-            $ControllerName = ControllerMain::class;
-            $ActionName = 'ActionPosts';
+            $ControllerName = ControllerPosts::class;
+            $ActionName = 'ActionMain';
         } elseif ($_SERVER['REQUEST_URI'] == '/authors') {
-            $ControllerName = ControllerMain::class;
-            $ActionName = 'ActionAuthors';
+            $ControllerName = ControllerAuthors::class;
+            $ActionName = 'ActionMain';
         }
 
         $controller = new $ControllerName();
