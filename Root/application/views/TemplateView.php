@@ -9,7 +9,7 @@
 
 <body>
 <?php include 'header.php'; ?>
-<?php //include 'Root/application/views/' . $ContentView; ?>
-<?php //include 'footer.php'; ?>
+<?php //connection 'Root/application/views/' . $ContentView; ?>
+<?php //connection 'footer.php'; ?>
 </body>
 </html>>

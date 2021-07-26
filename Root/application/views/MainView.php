@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__. '/../models/include/database.php';
+require_once __DIR__ . '/../models/connection/Connection.php';
 require_once __DIR__ . '/../models/GetPosts.php';
 ?>
 <link rel="stylesheet" type="text/css" href="style.css"/>

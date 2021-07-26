@@ -2,7 +2,7 @@
 
 namespace application\core;
 
-use application\controllers\ControllerMain as ControllerMain;
+use application\controllers\ControllerHomePage as ControllerHomePage;
 use application\controllers\ControllerPosts as ControllerPosts;
 use application\controllers\ControllerAuthors as ControllerAuthors;
 
@@ -14,7 +14,7 @@ class Route
         $ActionName = 'Index';
 
         if ($_SERVER['REQUEST_URI'] == '/') {
-            $ControllerName = ControllerMain::class;
+            $ControllerName = ControllerHomePage::class;
             $ActionName = 'ActionMain';
         } elseif ($_SERVER['REQUEST_URI'] == '/posts') {
             $ControllerName = ControllerPosts::class;
