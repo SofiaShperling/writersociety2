@@ -18,6 +18,6 @@ class ControllerHomePage extends Controller
     function ActionMain()
     {
         $data = $this->model->GetCategories();
-        $this->view->generate(__DIR__. '/../views/MainView.php', __DIR__. '/../views/TemplateView.php', $data);
+        $this->view->GenerateTemplate(__DIR__. '/../views/MainView.php', __DIR__. '/../views/TemplateView.php', $data);
     }
 }

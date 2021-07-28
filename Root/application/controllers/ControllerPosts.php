@@ -10,6 +10,6 @@ class ControllerPosts extends Controller
 
     function ActionMain()
     {
-        $this->view->generate('PostView.php', 'header.php', $data);
+        $this->view->GenerateTemplate(__DIR__. '/../views/PostView.php', __DIR__. '/../views/TemplateView.php', $data);
     }
 }
