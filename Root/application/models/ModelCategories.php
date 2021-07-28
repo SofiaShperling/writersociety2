@@ -12,11 +12,8 @@ class ModelCategories extends Model
 
         $this->model = new Connection();
         $link = $this->model->CreateConnection();
-
-//        $result = mysqli_query($link, $sql);
         $result = $link->query($sql);
-
-        $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $categories = $result->fetchAll();
 
         return $categories;
     }
