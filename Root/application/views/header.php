@@ -1,7 +1,3 @@
-<?php
-    require_once __DIR__ . '/../models/connection/Connection.php';
-    require_once __DIR__ . '/../models/ModelCategories.php';
-?>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title>Writer Society</title>
 <meta name="keywords" content=""/>
@@ -14,8 +10,7 @@
     <div id="header">
         <div id="menu">
             <ul>
-                <?php $categories = GetCategoties(); ?>
-                <?php foreach ($categories as $category):
+                <?php foreach ($data as $category):
                     $categorylink = $category["title"];
                     if ($category["title"] == 'main'){
                         $categorylink = '';
